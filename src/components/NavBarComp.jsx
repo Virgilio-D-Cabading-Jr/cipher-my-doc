@@ -15,7 +15,7 @@ const NavBar = () => {
                         <strong className='text-warning'>Cipher</strong><strong>MyDoc</strong>
                     </h2>
                     {/* **** Link to The Root of the Site ******** */}
-                    <Link to="/">
+                    <Link to="/anotherpage">
                         <button className='btn btn-sm btn-info round-btn'>
                             <strong>Home</strong>
                         </button>
