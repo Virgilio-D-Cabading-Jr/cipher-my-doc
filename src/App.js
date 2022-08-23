@@ -8,7 +8,7 @@ import {Switch, Route, Redirect} from 'react-router-dom';
 
 function App() {
   return (
-    <main >
+    <main className='bg'>
       {/* *** Nav Bar Component *** */}
       <NavBar />
       <Switch>
@@ -16,16 +16,16 @@ function App() {
           <div className="row bg-white p-3 round">
             <div className="col">
               {/* **** Home Route ******** */}
-              <Route exact path="/home">
+              <Route exact path="/">
                 {/* <HomeComp /> */}
                 <h1>Hello World</h1>
               </Route>
               {/* **** Root Redirect to Home ******** */}
-              <Route path="/">
-                <div className='bg'>
+              {/* <Route path="/">
+                <div >
                   <Redirect to="/home" />
                 </div>
-              </Route>
+              </Route> */}
             </div>
           </div>
         </div>
