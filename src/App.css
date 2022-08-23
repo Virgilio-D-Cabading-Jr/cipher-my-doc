@@ -36,3 +36,24 @@
     transform: rotate(360deg);
   }
 }
+
+.round {
+  border-radius: 20px;
+}
+
+.round-btn {
+  border-radius: 20px;
+  padding: 0px 12px;
+}
+
+.nav-brown {
+  background-color: chocolate;
+  color: white;
+}
+
+.mainImg {
+  border-radius: 20px;
+  width: 100%;
+  height: auto;
+  background-color: black;
+}
