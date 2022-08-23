@@ -1,6 +1,6 @@
 import NavBar from './components/NavBarComp';
 import './App.css';
-import {Switch, Route, Redirect} from 'react-router-dom';
+import {Switch, Route} from 'react-router-dom';
 
 ////////////////////////////////////////
 // App.js
