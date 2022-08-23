@@ -20,6 +20,10 @@ function App() {
                 {/* <HomeComp /> */}
                 <h1>Hello World</h1>
               </Route>
+              <Route exact path="/anotherpage">
+                {/* <HomeComp /> */}
+                <h1>This is another page</h1>
+              </Route>
               {/* **** Root Redirect to Home ******** */}
               {/* <Route path="/">
                 <div >
