@@ -9,7 +9,7 @@ import ActionBar from './components/ActinonBarComp';
 
 function App() {
   // //// VARIABLES //////////////////////////////
-  const [location, setLocation] = useState("notHome");
+  const [location, setLocation] = useState("Home");
 
   // //// CALL BACK FUNCTIONS ////////////////////
 
@@ -23,15 +23,21 @@ function App() {
       {/* *** Nav Bar Component *** */}
       <NavBar />
       {/* *** Action Bar Component *** */}
-      <ActionBar />
+      <ActionBar setNewLocation={ setNewLocation } />
 
       <div className="container mt-4">
         <div className="row bg-white p-3 round">
           <div className="col">
             {
               location === "Home"
-              ? <h1>I'm Home</h1>
-              : <h1>I'm not home</h1>
+              ? <div>
+                  <h1>I'm Home</h1>
+                  <p>Location: { location }</p>
+                </div>
+              : <div>
+                  <h1>I'm NOT Home</h1>
+                  <p>Location: { location }</p>
+                </div>
             }
             <p>Hello Test</p>
           </div>

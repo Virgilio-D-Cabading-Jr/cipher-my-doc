@@ -1,8 +1,16 @@
 import React from "react";
 
-const ActionBar = () => {
+const ActionBar = (props) => {
 
-    
+const locationIsCipher = (e) => {
+    e.preventDefault();
+    props.setNewLocation("Cipher")
+}
+
+const locationIsDeCipher = (e) => {
+    e.preventDefault();
+    props.setNewLocation("DeCipher")
+}
 
     return (
         <div className="container mt-4">
@@ -11,12 +19,14 @@ const ActionBar = () => {
                     <div className="row">
                         <h2 className="col">Action</h2>
                         {/* **** Cipher Button ******** */}
-                        <button className="btn round-btn btn-info col m-2">
-                            <strong>Cipher My Doc</strong>
+                        <button className="btn round-btn btn-info col m-2" 
+                            onClick={ locationIsCipher }>
+                            <strong>CIPHER</strong>
                         </button>
                         {/* **** De Cipher Button ******** */}
-                        <button className="btn round-btn btn-info col m-2">
-                            <strong>DeCipher My Doc</strong>
+                        <button className="btn round-btn btn-info col m-2"
+                            onClick={ locationIsDeCipher }>
+                            <strong>DE-CIPHER</strong>
                         </button>
                         
                     </div>
