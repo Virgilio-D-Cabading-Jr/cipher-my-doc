@@ -1,5 +1,9 @@
 import React from "react";
 
+//////////////////////////////////////////////
+// Component: Action Bar
+//////////////////////////////////////////////
+
 const ActionBar = (props) => {
 
 const locationIsCipher = (e) => {
