@@ -28,7 +28,7 @@ const NavBar = (props) => {
                         <strong className='text-warning'>Cipher</strong><strong>MyDoc</strong>
                     </h2>
                     {/* **** Link to The Root of the Site ******** */}
-                    <button className='btn btn-sm btn-info round-btn'
+                    <button className='btn btn-sm btn-location'
                         onClick={ resetLocToHome } >
                         <strong>Home</strong>
                     </button>

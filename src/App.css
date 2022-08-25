@@ -51,6 +51,16 @@
   color: white;
 }
 
+.btn-location {
+  border-radius: 20px;
+  padding: 0px 12px;
+  background-color: white;
+}
+
+.btn-location:hover {
+  background-color: dodgerblue;
+}
+
 .mainImg {
   border-radius: 20px;
   width: 100%;
