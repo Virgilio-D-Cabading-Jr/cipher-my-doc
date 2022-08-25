@@ -1,11 +1,19 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { useHistory } from 'react-router-dom'
 
 ////////////////////////////////////////////////////
 //  NAVIGATION BAR COMPONENT
 ////////////////////////////////////////////////////
 
-const NavBar = () => {
+const NavBar = (props) => {
+    const history = useHistory();
+
+    const resetLocToHome = (e) => {
+        e.preventDefault();
+        props.setNewLocation("Home");
+        history.push("/")
+    } 
+
     return (
         <header>
             <div className='navbar navbar-dark bg-dark box-shadow'>
@@ -15,11 +23,10 @@ const NavBar = () => {
                         <strong className='text-warning'>Cipher</strong><strong>MyDoc</strong>
                     </h2>
                     {/* **** Link to The Root of the Site ******** */}
-                    <Link to="/anotherpage">
-                        <button className='btn btn-sm btn-info round-btn'>
-                            <strong>Home</strong>
-                        </button>
-                    </Link>
+                    <button className='btn btn-sm btn-info round-btn'
+                        onClick={ resetLocToHome } >
+                        <strong>Home</strong>
+                    </button>
                 </div>
             </div>
         </header>
