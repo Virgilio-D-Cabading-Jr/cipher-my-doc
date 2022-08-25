@@ -1,6 +1,7 @@
 import React from 'react'
 import HomeComp from './HomeComp';
 import CipherDisplayComp from './CipherDisplayComp';
+import DeCipherDisplayComp from './DeCipherDisplayComp';
 
 /////////////////////////////////////////////////////
 // Main Display Component
@@ -17,8 +18,12 @@ const MainDisplay = (props) => {
         );
     } else if (location === "Cipher") {
         return (<div>
-            <CipherDisplayComp location={ location} />
+            <CipherDisplayComp location={ location } />
         </div>);
+    } else if (location === "DeCipher") {
+        return (<div>
+            <DeCipherDisplayComp location={ location } />
+        </div>)
     }
 
     

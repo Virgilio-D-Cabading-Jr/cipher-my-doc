@@ -13,8 +13,10 @@ const HomeComp = (props) => {
                 <div className="col">
                     <p>Home Display Component</p>
                     <div>
-                        <h1>I'm Home</h1>
-                        <p>{JSON.stringify(location)}</p>
+                        <h1>Welcome to Cipher My Doc</h1>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet ipsa quis totam, at autem enim accusamus non soluta quas ut. Molestias perferendis nulla molestiae voluptates nam eius fuga? Animi, illum?</p>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet ipsa quis totam, at autem enim accusamus non soluta quas ut. Molestias perferendis nulla molestiae voluptates nam eius fuga? Animi, illum?</p>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet ipsa quis totam, at autem enim accusamus non soluta quas ut. Molestias perferendis nulla molestiae voluptates nam eius fuga? Animi, illum?</p>
                     </div>
                 </div>
             </div>
