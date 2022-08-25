@@ -1,5 +1,6 @@
 import React from 'react'
 import HomeComp from './HomeComp';
+import CipherDisplayComp from './CipherDisplayComp';
 
 /////////////////////////////////////////////////////
 // Main Display Component
@@ -14,20 +15,10 @@ const MainDisplay = (props) => {
                 <HomeComp location={ location } />
             </div>
         );
-    } else {
-        return (
-            <div className="container mt-4">
-                <div className="row bg-white p-3 round">
-                    <div className="col">
-                        <p>Main Display Component</p>
-                        <div>
-                            <h1>I'm NOT Home</h1>
-                            <p>{JSON.stringify(location)}</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        );
+    } else if (location === "Cipher") {
+        return (<div>
+            <CipherDisplayComp location={ location} />
+        </div>);
     }
 
     
