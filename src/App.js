@@ -22,9 +22,9 @@ function App() {
   return (
     <main className='bg'>
       {/* *** Nav Bar Component *** */}
-      <NavBar setNewLocation={ setNewLocation } />
+      <NavBar  setNewLocation={ setNewLocation } />
       {/* *** Action Bar Component *** */}
-      <ActionBar setNewLocation={ setNewLocation } />
+      <ActionBar location={ location } setNewLocation={ setNewLocation } />
 
       {/* *** Main Display Component */}
       <MainDisplay location= {location} />

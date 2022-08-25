@@ -5,17 +5,22 @@ import React from "react";
 //////////////////////////////////////////////
 
 const ActionBar = (props) => {
+    // //// VARIABLES ////////////////////////
+    const location = props.location;
 
-const locationIsCipher = (e) => {
-    e.preventDefault();
-    props.setNewLocation("Cipher")
-}
+    // //// UTILITY FUNCTIONS ////////////////
 
-const locationIsDeCipher = (e) => {
-    e.preventDefault();
-    props.setNewLocation("DeCipher")
-}
+    const locationIsCipher = (e) => {
+        e.preventDefault();
+        props.setNewLocation("Cipher")
+    }
 
+    const locationIsDeCipher = (e) => {
+        e.preventDefault();
+        props.setNewLocation("DeCipher")
+    }
+
+    // //// OUTPUT //////////////////////////
     return (
         <div className="container mt-4">
             <div className="row bg-dark p-3 round">
@@ -23,15 +28,30 @@ const locationIsDeCipher = (e) => {
                     <div className="row">
                         <h2 className="col text-warning">Action</h2>
                         {/* **** Cipher Button ******** */}
-                        <button className="btn btn-location col m-2" 
-                            onClick={ locationIsCipher }>
-                            <strong>🔐 CIPHER</strong>
-                        </button>
+                        {
+                            location === "Cipher"
+                            ?   <button className="btn btn-location-active col m-2" 
+                                    onClick={ locationIsCipher }>
+                                    <strong>🔐 CIPHER</strong>
+                                </button>
+                            :   <button className="btn btn-location col m-2" 
+                                    onClick={ locationIsCipher }>
+                                    <strong>🔐 CIPHER</strong>
+                                </button>
+                        }
                         {/* **** De Cipher Button ******** */}
-                        <button className="btn btn-location col m-2"
-                            onClick={ locationIsDeCipher }>
-                            <strong>🔓 DE-CIPHER</strong>
-                        </button>
+                        {
+                            location === "DeCipher"
+                            ?   <button className="btn btn-location-active col m-2"
+                                    onClick={ locationIsDeCipher }>
+                                    <strong>🔓 DE-CIPHER</strong>
+                                </button>
+                            :   <button className="btn btn-location col m-2"
+                                    onClick={ locationIsDeCipher }>
+                                    <strong>🔓 DE-CIPHER</strong>
+                                </button>
+                        }
+                        
                         
                     </div>
                 </div>
