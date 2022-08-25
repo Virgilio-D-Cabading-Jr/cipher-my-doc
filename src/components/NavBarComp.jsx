@@ -6,7 +6,10 @@ import { useHistory } from 'react-router-dom'
 ////////////////////////////////////////////////////
 
 const NavBar = (props) => {
+    // //// VARIABLES //////////////////////////////
     const history = useHistory();
+
+    // //// UTILITY FUNCTIONS //////////////////////
 
     const resetLocToHome = (e) => {
         e.preventDefault();
@@ -14,12 +17,14 @@ const NavBar = (props) => {
         history.push("/")
     } 
 
+    // //// OUTPUT /////////////////////////////////
     return (
         <header>
             <div className='navbar navbar-dark bg-dark box-shadow'>
                 <div className='container d-flex justify-content-between'>
                     {/* **** Site Title ******** */}
-                    <h2 className='text-light'>
+                    <h2 className='text-light' 
+                        onClick={ resetLocToHome }>
                         <strong className='text-warning'>Cipher</strong><strong>MyDoc</strong>
                     </h2>
                     {/* **** Link to The Root of the Site ******** */}
