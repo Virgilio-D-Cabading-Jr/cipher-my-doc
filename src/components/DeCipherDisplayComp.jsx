@@ -97,18 +97,14 @@ const DeCipherDisplayComp = (props) => {
                             <h4 className='col m-2'>Ceasar Cipher</h4>
                             {/* **** De-Cipher Modifier ******** */}
                             <div className="col m-2">
-                                <div className='row'>
-                                    <label className='col' htmlFor="deCipherModifier">Amount to shift:</label>
-                                    <div className="col m-2">
-                                        <input type="number"
-                                            id="deCipherModifier"
-                                            value={ deCipherModifier }
-                                            onChange={e => setDeCipherModifier(parseInt(e.target.value))} />
-                                    </div>
-                                </div>
+                                <label htmlFor="deCipherModifier">Amount to shift:</label>
+                                <input type="number"
+                                        id="deCipherModifier"
+                                        value={ deCipherModifier }
+                                        onChange={e => setDeCipherModifier(parseInt(e.target.value))} />
                             </div>
                             {/* **** Submit Button ******** */}
-                            <button type="submit" className="btn btn-success round-btn col">
+                            <button type="submit" className="btn btn-success round-btn col m-2">
                                 <strong>🔓 De-Cipher Text</strong>
                             </button>
                         </div>
