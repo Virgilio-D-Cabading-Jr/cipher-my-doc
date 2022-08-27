@@ -1,9 +1,16 @@
 import React from 'react'
 
+/////////////////////////////////////////////////////
+// De-Cipher Output Component
+/////////////////////////////////////////////////////
+
 const DeCipherOutputComp = (props) => {
-  return (
-    <div>DeCipherOutputComp</div>
-  )
+    // //// VARIABLES ///////////////////////////////
+
+    // //// OUTPUT //////////////////////////////////
+    return (
+        <div>DeCipherOutputComp</div>
+    )
 }
 
 export default DeCipherOutputComp
