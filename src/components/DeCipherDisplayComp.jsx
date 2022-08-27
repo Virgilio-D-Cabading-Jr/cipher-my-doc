@@ -64,6 +64,8 @@ const DeCipherDisplayComp = (props) => {
     const handleSubmit = (e) => {
         e.preventDefault();          // Prevents browser from refreshing when form submitted
         setDecipherSubmitted(true);
+        setDeCipheredText( deCaesarCipher(textToDeCipher, deCipherModifier) );
+        console.log("**** In De-Cipher Display, De-Cipher submitted:");
     }
 
     // //// OUTPUT //////////////////////////////////
