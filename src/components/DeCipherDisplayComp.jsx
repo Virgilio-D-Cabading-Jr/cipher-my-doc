@@ -5,7 +5,20 @@ import {React, useState} from 'react'
 /////////////////////////////////////////////////////
 
 const DeCipherDisplayComp = (props) => {
+    // //// VARIABLES ///////////////////////////////
     const location = props.location;
+    const [textToDeCipher, settextToDeCipher] = useState("");   // Text to be De-Ciphered
+
+    // //// UTILITY FUNCTIONS ///////////////////////
+
+    /**
+     * Handle Submit Function
+     */
+    const handleSubmit = (e) => {
+        e.prevenDefault();          // Prevents browser from refreshing when form submitted
+    }
+
+    // //// OUTPUT //////////////////////////////////
     return (
         <div className="container mt-4">
             <div className="row bg-white p-3 round">
@@ -20,10 +33,10 @@ const DeCipherDisplayComp = (props) => {
                                         <strong>Text to be De-Ciphered:</strong>
                                     </label>
                                     <textarea className="form-control"
-                                        id="textToDeCipher" rows="10"
+                                        id="textToDeCipher" rows="6"
                                         placeholder="Enter text to be De-Ciphered here"
-                                        value={textToCipher}
-                                        onChange={e => setTextToDeCipher(e.target.value)} />
+                                        value={textToDeCipher}
+                                        onChange={e => settextToDeCipher(e.target.value)} />
                                 </div>
                             </div>
                         </div>
