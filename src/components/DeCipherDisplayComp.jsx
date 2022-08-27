@@ -7,6 +7,7 @@ import {React, useState} from 'react'
 const DeCipherDisplayComp = (props) => {
     // //// VARIABLES ///////////////////////////////
     const location = props.location;
+    const [decipherSubmitted, setDecipherSubmitted] = useState(false);
     const [textToDeCipher, settextToDeCipher] = useState("");   // Text to be De-Ciphered
 
     // //// UTILITY FUNCTIONS ///////////////////////
@@ -16,6 +17,7 @@ const DeCipherDisplayComp = (props) => {
      */
     const handleSubmit = (e) => {
         e.prevenDefault();          // Prevents browser from refreshing when form submitted
+        setDecipherSubmitted(true);
     }
 
     // //// OUTPUT //////////////////////////////////
