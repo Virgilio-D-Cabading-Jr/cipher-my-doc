@@ -67,10 +67,13 @@ const DeCipherDisplayComp = (props) => {
                             </button>
                         </div>
                     </form>
-                    <DeCipherOutputComp 
-                        decipherSubmitted={ decipherSubmitted }
-                        textToDeCipher={ textToDeCipher }
-                        deCipherModifier= { deCipherModifier } />
+                    {
+                        decipherSubmitted
+                            ?   <DeCipherOutputComp 
+                                    textToDeCipher={ textToDeCipher }
+                                    deCipherModifier= { deCipherModifier } />
+                            :   <div></div>
+                    }
                 </div>
             </div>
         </div>
