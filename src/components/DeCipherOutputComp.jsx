@@ -6,8 +6,8 @@ import {React, useState} from 'react';
 
 const DeCipherOutputComp = (props) => {
     // //// VARIABLES ///////////////////////////////
-    const [deCipheredText, setDeCipheredText] = useState("");   // Text that has been De-Ciphered
-
+    const deCipheredText = props.deCipheredText;
+    const setDeCipheredText = props.setDeCipheredText;
 
     // //// OUTPUT //////////////////////////////////
     return (<div mt-3>
