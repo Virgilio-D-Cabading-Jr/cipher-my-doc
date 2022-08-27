@@ -68,14 +68,11 @@ const CipherDisplayComp = (props) => {
         console.log({ cipherModifier });
     };
 
-
-
     // //// OUTPUT //////////////////////////////////
     return (
         <div className="container mt-4">
             <div className="row bg-white p-3 round">
                 <div className="col">
-                    <p>Cipoher Modifier:{JSON.stringify(cipherModifier)}</p>
                     {/* **** Input Form ******** */}
                     <form onSubmit={e => handleSubmit(e)} >
                         <div className='row'>
