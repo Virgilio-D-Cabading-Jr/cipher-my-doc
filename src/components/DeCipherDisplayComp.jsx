@@ -42,7 +42,7 @@ const DeCipherDisplayComp = (props) => {
             if (currentLet.toLowerCase() != currentLet.toUpperCase()) {
                 const isCapital = currentLet === currentLet.toUpperCase();
                 // console.log({isCapital});
-                const shiftAmt = (parseInt(alphaMap[currentLet.toLowerCase()]) - k) % 26;
+                const shiftAmt = ((parseInt(alphaMap[currentLet.toLowerCase()]) - (k%26) ) + 26) % 26;
                 // console.log("k:", k);
                 // console.log({shiftAmt});
                 if (isCapital) {

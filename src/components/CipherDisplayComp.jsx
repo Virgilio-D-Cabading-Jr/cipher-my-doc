@@ -83,7 +83,7 @@ const CipherDisplayComp = (props) => {
                                         <strong>Text to be Ciphered:</strong>
                                     </label>
                                     <textarea className="form-control"
-                                        id="textToCipher" rows="10"
+                                        id="textToCipher" rows="6"
                                         placeholder="Enter text to be Ciphered here"
                                         value={textToCipher}
                                         onChange={e => setTextToCipher(e.target.value)} />
@@ -118,7 +118,7 @@ const CipherDisplayComp = (props) => {
                                         <strong>Ciphered Text:</strong>
                                     </label>
                                     <textarea className="form-control"
-                                        id="cipheredText" rows="10"
+                                        id="cipheredText" rows="6"
                                         value={cipheredText}
                                         onChange={e => setCipheredText(e.target.value)} />
                                 </div>
