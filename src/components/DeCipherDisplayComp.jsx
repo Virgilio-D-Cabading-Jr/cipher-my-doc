@@ -7,7 +7,6 @@ import DeCipherOutputComp from './DeCipherOutputComp';
 
 const DeCipherDisplayComp = (props) => {
     // //// VARIABLES ///////////////////////////////
-    const location = props.location;
     const [decipherSubmitted, setDecipherSubmitted] = useState(false);
     const [deCipherModifier, setDeCipherModifier] = useState(0);
     const [textToDeCipher, settextToDeCipher] = useState("");   // Text to be De-Ciphered
@@ -29,6 +28,10 @@ const DeCipherDisplayComp = (props) => {
         };
         const alphaArray = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'];
         let output = "";
+
+        if (k<0) {
+            k= ((k%26)+26)%26
+        }
 
         // Iterate through the string
         //      for each letter in the string
@@ -73,7 +76,6 @@ const DeCipherDisplayComp = (props) => {
         <div className="container mt-4">
             <div className="row bg-white p-3 round">
                 <div className="col">
-                    <p>DeCipher Display Component</p>
                     {/* **** Text Input Form ******** */}
                     <form onSubmit={e => handleSubmit(e)} >
                         <div className='row'>

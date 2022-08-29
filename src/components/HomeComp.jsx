@@ -5,7 +5,6 @@ import React from 'react'
 ////////////////////////////////////////////
 
 const HomeComp = (props) => {
-    const location = props.location;
 
     return (
         <div className="container mt-4">

@@ -6,7 +6,6 @@ import { React, useState } from 'react';
 
 const CipherDisplayComp = (props) => {
     // //// VARIABLES ///////////////////////////////
-    const location = props.location;
     const [cipherSubmitted, setCipherSubmitted] = useState(false);  // Has Cipher been submitted?
     const [cipherModifier, setCipherModifier] = useState(0);
     const [textToCipher, setTextToCipher] = useState("");           // Text to be Ciphered
@@ -31,6 +30,10 @@ const CipherDisplayComp = (props) => {
         const alphaArray = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'];
         let output = "";
 
+        if (k<0) {
+            k= ((k%26)+26)%26
+        }
+
         // Iterate through the string
         //      for each letter in the string
         //          determine if it is a capital or lower case letter
@@ -40,7 +43,7 @@ const CipherDisplayComp = (props) => {
             // console.log({currentLet});
             // console.log("Alphamap:", alphaMap[currentLet.toLowerCase()])
             // Check if current letter is a letter
-            if (currentLet.toLowerCase() != currentLet.toUpperCase()) {
+            if (currentLet.toLowerCase() !== currentLet.toUpperCase()) {
                 const isCapital = currentLet === currentLet.toUpperCase();
                 // console.log({isCapital});
                 const shiftAmt = (parseInt(alphaMap[currentLet.toLowerCase()]) + k) % 26;
