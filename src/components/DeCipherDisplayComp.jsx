@@ -39,15 +39,10 @@ const DeCipherDisplayComp = (props) => {
         //          shift the letter by #k
         //          memorize the shifted letter to output string
         for (let currentLet of s) {
-            // console.log({currentLet});
-            // console.log("Alphamap:", alphaMap[currentLet.toLowerCase()])
             // Check if current letter is a letter
-            if (currentLet.toLowerCase() != currentLet.toUpperCase()) {
+            if (currentLet.toLowerCase() !== currentLet.toUpperCase()) {
                 const isCapital = currentLet === currentLet.toUpperCase();
-                // console.log({isCapital});
                 const shiftAmt = ((parseInt(alphaMap[currentLet.toLowerCase()]) - (k%26) ) + 26) % 26;
-                // console.log("k:", k);
-                // console.log({shiftAmt});
                 if (isCapital) {
                     output += alphaArray[shiftAmt].toUpperCase();
                 } else {
@@ -57,7 +52,6 @@ const DeCipherDisplayComp = (props) => {
                 output += currentLet;
             }
         }
-        // console.log({ output });
         return output;
     }
 
